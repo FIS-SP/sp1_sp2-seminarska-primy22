@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^klet.* index.php/$1 [L] 
+RewriteRule ^search.* api-search.php/$1 [L] 
+RewriteRule ^delete.* api-delete.php/$1 [L]
+RewriteRule ^update.* api-update.php/$1 [L]
+RewriteRule ^create.* api-create.php/$1 [L]
+</IfModule>
